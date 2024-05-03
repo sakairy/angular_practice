@@ -7,8 +7,8 @@ export class MyCustomPopupMenuHandler extends PopupMenuHandler {
 		super(graph);
 
 		// Installs context menu
-		this.factoryMethod = function (menu, cell, evt) {
-			//const menu = menu_ as unknown as MaxPopupMenu
+		this.factoryMethod = function (menu_, cell, evt) {
+			const menu = menu_ as unknown as MaxPopupMenu
 			menu.addItem('Item 1', null, function () {
 				alert('Item 1');
 			});
