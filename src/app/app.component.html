@@ -1,4 +1,4 @@
-<mat-toolbar class="flex">
+<mat-toolbar class="flex" color="primary">
   <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
@@ -18,7 +18,15 @@
 
 <mat-drawer-container class="flex-grow">
   <mat-drawer #drawer>
-    <a routerLink="hello">graph</a>
+    <mat-nav-list>
+      <a mat-list-item routerLink="hello">
+        hello
+      </a>
+      <a mat-list-item routerLink="graph-menu">
+        MaxGraph Menu
+      </a>
+    
+    </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet />
